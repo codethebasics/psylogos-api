@@ -19,5 +19,6 @@ public class PanasItemsEntity {
     private Long id;
 
     @Column(name = "item")
+    @Enumerated(EnumType.STRING)
     private List<PanasStatusEnum> items;
 }

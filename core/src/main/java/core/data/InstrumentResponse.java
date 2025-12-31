@@ -2,8 +2,10 @@ package core.data;
 
 import core.enums.InstrumentTypeEnum;
 
+import java.time.LocalDateTime;
+
 public final class InstrumentResponse {
-    private final String timestamp;
+    private final LocalDateTime timestamp;
     private final Integer pingDay;
     private final Integer pingIndex;
     private final InstrumentTypeEnum type;
@@ -15,7 +17,7 @@ public final class InstrumentResponse {
     private final ScreenTimeEntry[] screenTimeLog;
 
     public InstrumentResponse(
-            String timestamp,
+            LocalDateTime timestamp,
             Integer pingDay,
             Integer pingIndex,
             InstrumentTypeEnum type,
@@ -37,7 +39,7 @@ public final class InstrumentResponse {
         this.screenTimeLog = screenTimeLog;
     }
 
-    public String getTimestamp() {
+    public LocalDateTime getTimestamp() {
         return timestamp;
     }
 

@@ -1,10 +1,12 @@
 package core.data;
 
+import java.time.LocalDateTime;
+
 public final class GameState {
     private final User user;
     private final Badge[] badges;
     private final Boolean hasOnboarded;
-    private final String studyStartDate;
+    private final LocalDateTime studyStartDate;
     private final InstrumentResponse[] responses;
     private final PingStatus[] pings;
     private final SocialDemographicData socialDemographicData;
@@ -31,7 +33,7 @@ public final class GameState {
         return hasOnboarded;
     }
 
-    public String getStudyStartDate() {
+    public LocalDateTime getStudyStartDate() {
         return studyStartDate;
     }
 
@@ -59,7 +61,7 @@ public final class GameState {
         private final User user;
         private Badge[] badges;
         private Boolean hasOnboarded;
-        private String studyStartDate;
+        private LocalDateTime studyStartDate;
         private InstrumentResponse[] responses;
         private PingStatus[] pings;
         private SocialDemographicData socialDemographicData;
@@ -81,7 +83,7 @@ public final class GameState {
             return this;
         }
 
-        public Builder studyStartDate(String studyStartDate) {
+        public Builder studyStartDate(LocalDateTime studyStartDate) {
             this.studyStartDate = studyStartDate;
             return this;
         }

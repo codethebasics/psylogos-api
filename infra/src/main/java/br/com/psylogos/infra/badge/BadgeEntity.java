@@ -1,9 +1,12 @@
 package br.com.psylogos.infra.badge;
 
+import br.com.psylogos.infra.game.GameStateEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@NoArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -22,4 +25,8 @@ public class BadgeEntity {
 
     @Column(name = "unlocked")
     private Boolean unlocked;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_gamestate")
+    private GameStateEntity gameState;
 }

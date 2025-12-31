@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -18,4 +20,7 @@ public class PingStatusEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private PingStatusEnum status;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private PingStatusMatrixEntity pingStatusMatrix;
 }

@@ -1,5 +1,6 @@
 package br.com.psylogos.infra.data;
 
+import br.com.psylogos.infra.game.GameStateEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -68,4 +69,7 @@ public class SocialDemographicDataEntity {
 
     @Column(name = "purpose_search")
     private String purposeSearch;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private GameStateEntity gameState;
 }
