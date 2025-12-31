@@ -1,4 +1,4 @@
-package br.com.psylogos.instrument;
+package br.com.psylogos.infra.instrument;
 
 import br.com.psylogos.infra.game.GameStateEntity;
 import br.com.psylogos.infra.panas.PanasResponseEntity;

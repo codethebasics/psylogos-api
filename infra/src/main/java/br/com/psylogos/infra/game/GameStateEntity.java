@@ -2,10 +2,9 @@ package br.com.psylogos.infra.game;
 
 import br.com.psylogos.infra.badge.BadgeEntity;
 import br.com.psylogos.infra.data.SocialDemographicDataEntity;
-import br.com.psylogos.infra.ping.PingStatusEntity;
 import br.com.psylogos.infra.ping.PingStatusMatrixEntity;
 import br.com.psylogos.infra.user.UserEntity;
-import br.com.psylogos.instrument.InstrumentResponseEntity;
+import br.com.psylogos.infra.instrument.InstrumentResponseEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

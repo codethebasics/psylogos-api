@@ -18,7 +18,7 @@ public class PingStatusMatrixEntity {
     @OneToMany(mappedBy = "pingStatusMatrix")
     private List<PingStatusEntity> pingStatus;
 
-    @MapsId("gameStateId") // Vincula o campo da PK com esta entidade
+    @MapsId("gameStateId")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_gamestate")
     private GameStateEntity gameState;
